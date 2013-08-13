@@ -1,0 +1,151 @@
+--- !ruby/object:Gem::Specification
+name: hipchat
+version: !ruby/object:Gem::Version
+  version: 0.11.0
+platform: ruby
+authors:
+- HipChat/Atlassian
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2013-07-19 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: httparty
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rr
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: bundler
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ~>
+      - !ruby/object:Gem::Version
+        version: '1.3'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ~>
+      - !ruby/object:Gem::Version
+        version: '1.3'
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: webmock
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Ruby library to interact with HipChat
+email:
+- support@hipchat.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- .document
+- .gitignore
+- .travis.yml
+- Gemfile
+- Gemfile.lock
+- LICENSE
+- README.textile
+- Rakefile
+- hipchat.gemspec
+- lib/hipchat.rb
+- lib/hipchat/capistrano.rb
+- lib/hipchat/chef.rb
+- lib/hipchat/rails3_tasks.rb
+- lib/hipchat/railtie.rb
+- lib/hipchat/version.rb
+- spec/example/history.json
+- spec/hipchat_spec.rb
+- spec/spec.opts
+- spec/spec_helper.rb
+homepage: https://github.com/hipchat/hipchat-rb
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.0.3
+signing_key: 
+specification_version: 4
+summary: Ruby library to interact with HipChat
+test_files:
+- spec/example/history.json
+- spec/hipchat_spec.rb
+- spec/spec.opts
+- spec/spec_helper.rb

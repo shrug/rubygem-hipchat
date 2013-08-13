@@ -1,0 +1,17 @@
+Source: rubygem-hipchat
+Section: ruby
+Priority: extra
+Maintainer: Rob Braden <bradejr@puppetlabs.com>
+Build-Depends: debhelper (>= 8.0.0), gem2deb
+Standards-Version: 3.9.3
+Homepage: https://github.com/hipchat/hipchat-rb
+#Vcs-Git: git://git.debian.org/collab-maint/hipchat.git
+#Vcs-Browser: http://git.debian.org/?p=collab-maint/hipchat.git;a=summary
+XS-Ruby-Versions: all
+
+Package: rubygem-hipchat
+Architecture: all
+XS-Ruby-Versions: ${ruby:Versions}
+Depends: ${shlibs:Depends}, ${misc:Depends}, rubygem-httparty, ruby | ruby-interpreter
+Description: HipChat HTTP API Wrapper in Ruby with Capistrano hooks
+ A very basic wrapper for the HipChat HTTP API.
