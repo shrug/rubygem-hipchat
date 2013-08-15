@@ -4,6 +4,8 @@
 %global gemdir %(ruby -rubygems -e 'puts Gem::dir' 2>/dev/null)
 %global geminstdir %{gemdir}/gems/%{gemname}-%{version}
 %global rubyabi 1.8
+%define debug_package %{nil}
+
 
 Summary: Ruby library to interact with HipChat
 Name: rubygem-%{gemname}
@@ -15,6 +17,7 @@ URL: https://github.com/hipchat/hipchat-rb
 Source0: http://rubygems.org/gems/%{gemname}-%{version}.gem
 Requires: ruby(abi) = %{rubyabi}
 Requires: ruby(rubygems) 
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 Requires: rubygem(httparty) 
 BuildRequires: ruby(abi) = %{rubyabi}
 BuildRequires: ruby(rubygems) 
@@ -45,12 +48,13 @@ gem install --local --install-dir .%{gemdir} \
 %build
 
 %install
-rm -rf $buildroot
+rm -rf %{buildroot}
 mkdir -p %{buildroot}%{gemdir}
 cp -pa .%{gemdir}/* \
         %{buildroot}%{gemdir}/
+
 %clean
-rm -rf $buildroot
+rm -rf %{buildroot}
 
 %files
 %defattr(-, root, root, -)
